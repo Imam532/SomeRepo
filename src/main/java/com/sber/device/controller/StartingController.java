@@ -21,7 +21,7 @@ public class StartingController {
     }
 
     @GetMapping("/start")
-    public boolean isReady() throws IOException {
+    public List<Integer> isReady() throws IOException {
         return starting.isReconciliationReady();
     }
 

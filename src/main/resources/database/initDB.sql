@@ -1,5 +1,5 @@
 /*==============================================================*/
-/* DBMS name:      PostgreSQL 10                               */
+/* DBMS name:      PostgresSQL 10                               */
 /* Created on:     23.06.2020 19:19                          */
 /*==============================================================*/
 
@@ -17,7 +17,7 @@ create schema payment;
 create table payment.payments
 (
     id                serial       not null,
-    merchant_id       integer      null,
+    merchant_id       varchar     null,
     invoice_id        integer      null,
     card_id           integer      null,
     amount_micros     money        null,
@@ -25,7 +25,7 @@ create table payment.payments
     status            int2         null,
     paysys_order_id   varchar(50)  null,
     created_at        timestamptz  null,
-    paysys_order_date varchar(50)  null,
+    paysys_order_date timestamptz  null,
     auth_code         char(6)      null,
     card_num          varchar(21)  null,
     payment_url       varchar(500) null,

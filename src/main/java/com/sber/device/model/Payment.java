@@ -19,10 +19,10 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private int merchant_id; //fk3
+    private String merchant_id; //TODO in base has integer --fk3
     private int invoice_id; //fk1
     private int card_id; //fk2
-    private BigDecimal amount_micros;
+    private BigDecimal amount_micros;   //TODO in base has integer
 
     @Column(length = 5)
     private String currency;
