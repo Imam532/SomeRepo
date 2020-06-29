@@ -1,80 +1,27 @@
 package com.sber.device.service.impl;
 
-import com.sber.device.model.RegistryFile;
-import com.sber.device.model.RegistryPayment;
-import com.sber.device.service.abstraction.*;
-import org.apache.commons.io.FilenameUtils;
+import com.opencsv.exceptions.CsvDataTypeMismatchException;
+import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
+import com.sber.device.service.abstraction.FirstStageService;
+import com.sber.device.service.abstraction.PrepareReconciliation;
+import com.sber.device.service.abstraction.StartReconciliation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import java.io.File;
+import javax.mail.MessagingException;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
-@Service
-public class StartReconciliationImpl implements StartReconciliation {
-
-    private RegistryFile registryFile;
-    private List<File> files = new ArrayList<>();
-    private List<RegistryPayment> registryPayments = new ArrayList<>();
-
-    private final XlsxParser parser;
-    private final FileSearcher searcher;
-    private final RegistryFileService registryFileService;
-    private final RegistryPaymentService registryPaymentService;
-
+public class StartReconciliationImpl  implements StartReconciliation {
+    private final PrepareReconciliation prepare;
+    private final FirstStageService firstStageService;
 
     @Autowired
-    public StartReconciliationImpl(XlsxParser parser,
-                                   FileSearcher searcher,
-                                   RegistryFileService registryFileService,
-                                   RegistryPaymentService registryPaymentService
-    ) {
-        this.parser = parser;
-        this.searcher = searcher;
-        this.registryFileService = registryFileService;
-        this.registryPaymentService = registryPaymentService;
-
+    public StartReconciliationImpl (PrepareReconciliation prepare, FirstStageService firstStageService) {
+        this.prepare = prepare;
+        this.firstStageService = firstStageService;
     }
-
-
     @Override
-    public List<Integer> isReconciliationReady() throws IOException {
-        List<Integer> regFileIds = new ArrayList<>();
-        files = searcher.searchFile();
-
-        for (File file : files) {                                                  //forEach file -> XlsxParser
-            if (registryFileService.processingFile(file.getName()) != null) {
-                //TODO что делать если файл обозначен что в обработке?
-            } else {
-                Date date = new Date();                                         //TODO change this?
-                registryPayments = parser.parseFile(file);                         //file -> list of RegistryPayment
-                registryFile = new RegistryFile(file.getName(), date, 1);
-                registryFileService.save(registryFile);             //save RegistryFile entity in BD, file in processing;
-                registryFile = registryFileService.getFileByName(file.getName());  // BD payment.reg_file -> RegistryFile
-                if (registryFile != null) {
-                    for (RegistryPayment registryPayment : registryPayments) {
-                        registryPayment.setReg_file_id(registryFile);
-                        registryPaymentService.save(registryPayment);       //save RegistryPayment entity in BD
-                    }
-                }
-                /**
-                 * согласно confluence просто меняем имя файла
-                 * Но в dev используем копирование в новую директорию
-                 */
-//                file.renameTo(new File(file.getParentFile(), FilenameUtils.removeExtension(file.getName()) + ".res"));
-
-                String path = "src/main/uploads/changed/";
-                String fileName = FilenameUtils.removeExtension(file.getName()) + ".res";
-                File copyingFile = new File(path + fileName);
-                Files.copy(file.toPath(), copyingFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-                regFileIds.add(registryFile.getId());
-            }
-        }
-        return regFileIds;
+    public boolean start() throws IOException, MessagingException, CsvRequiredFieldEmptyException, CsvDataTypeMismatchException {
+        firstStageService.startFirstStage(prepare.isReconciliationReady());
+        return true;
     }
 }

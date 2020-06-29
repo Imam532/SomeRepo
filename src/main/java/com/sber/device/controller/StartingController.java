@@ -1,7 +1,7 @@
 package com.sber.device.controller;
 
 import com.sber.device.model.RegistryFile;
-import com.sber.device.service.abstraction.StartReconciliation;
+import com.sber.device.service.abstraction.PrepareReconciliation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,10 +13,10 @@ import java.util.List;
 
 @RestController
 public class StartingController {
-    private final StartReconciliation starting;
+    private final PrepareReconciliation starting;
 
     @Autowired
-    public StartingController(StartReconciliation starting) {
+    public StartingController(PrepareReconciliation starting) {
         this.starting = starting;
     }
 

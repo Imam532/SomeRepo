@@ -25,7 +25,12 @@ public interface RegistryPaymentDao extends CrudRepository<RegistryPayment, Inte
 //
 //    List<RegistryPayment> getAllRecordsByRegistryFileId(Integer fileId);
 //
-//    @Modifying
-//    @Query("update RegistryPayment u set u.merchant_code = ?1")
-//    void updateMerchantCode(String merchantCode);
+
+    @Query("select rp from RegistryPayment rp where rp.reg_file_id = : regFileId")
+    List<RegistryPayment> getRegistryPayments(@Param("regFileId") int regFileId);
+
+    @Modifying
+    @Query("update RegistryPayment pr set pr.merchant_code = ?1")
+    void updateMerchantCode(String merchantCode);
+
 }

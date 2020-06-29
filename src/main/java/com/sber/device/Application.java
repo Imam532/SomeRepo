@@ -15,4 +15,22 @@ public class Application {
         SpringApplication.run(Application.class, args);
 
     }
+
+//    public void run(String... args) {
+//
+//        System.out.println("Sending Email...");
+//
+//        try {
+//            //sendEmail();
+//            sendEmailWithAttachment();
+//
+//        } catch (MessagingException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        System.out.println("Done");
+//
+//    }
 }

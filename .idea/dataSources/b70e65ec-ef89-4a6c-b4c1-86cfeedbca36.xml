@@ -7,9 +7,12 @@
     <database id="2" parent="1" name="SberDevice">
       <ObjectId>17295</ObjectId>
       <Owner>root</Owner>
-      <IntrospectionStateNumber>1392</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1407</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|18398|18400|1
+      <Relations>sequence|table|19086|19088|1
+sequence|table|19097|19099|1
+sequence|table|19105|19107|1
+sequence|table|18398|18400|1
 sequence|table|18409|18411|1
 sequence|table|18417|18419|1
 </Relations>
@@ -72,10 +75,10 @@ sequence|table|18417|18419|1
       <Owner>postgres</Owner>
     </schema>
     <schema id="12" parent="2" name="payment">
-      <ObjectId>19047</ObjectId>
-      <StateNumber>1379</StateNumber>
+      <ObjectId>19085</ObjectId>
+      <StateNumber>1397</StateNumber>
       <Owner>root</Owner>
-      <IntrospectionStateNumber>1393</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1408</IntrospectionStateNumber>
     </schema>
     <schema id="13" parent="2" name="pg_catalog">
       <ObjectId>11</ObjectId>
@@ -146,5 +149,314 @@ sequence|table|18417|18419|1
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
+    <sequence id="22" parent="12" name="payments_id_seq">
+      <ObjectId>19086</ObjectId>
+      <StateNumber>1398</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="23" parent="12" name="registry_file_id_seq">
+      <ObjectId>19105</ObjectId>
+      <StateNumber>1400</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="24" parent="12" name="registry_payments_id_seq">
+      <ObjectId>19097</ObjectId>
+      <StateNumber>1399</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="25" parent="12" name="payments">
+      <ObjectId>19088</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1401</StateNumber>
+    </table>
+    <table id="26" parent="12" name="registry_file">
+      <ObjectId>19107</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1402</StateNumber>
+    </table>
+    <table id="27" parent="12" name="registry_payments">
+      <ObjectId>19099</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1402</StateNumber>
+    </table>
+    <column id="28" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1398</StateNumber>
+      <DefaultExpression>nextval(&apos;payment.payments_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="29" parent="25" name="merchant_id">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="30" parent="25" name="invoice_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="31" parent="25" name="card_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="32" parent="25" name="amount_micros">
+      <Position>5</Position>
+      <DataType>money|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>790</TypeId>
+    </column>
+    <column id="33" parent="25" name="currency">
+      <Position>6</Position>
+      <DataType>varchar(5)|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="34" parent="25" name="status">
+      <Position>7</Position>
+      <DataType>smallint|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="35" parent="25" name="paysys_order_id">
+      <Position>8</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="36" parent="25" name="created_at">
+      <Position>9</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="37" parent="25" name="paysys_order_date">
+      <Position>10</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="38" parent="25" name="auth_code">
+      <Position>11</Position>
+      <DataType>char(6)|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="39" parent="25" name="card_num">
+      <Position>12</Position>
+      <DataType>varchar(21)|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="40" parent="25" name="payment_url">
+      <Position>13</Position>
+      <DataType>varchar(500)|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="41" parent="25" name="expiration">
+      <Position>14</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="42" parent="25" name="uid">
+      <Position>15</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>1398</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="43" parent="25" name="pk_payments">
+      <ObjectId>19095</ObjectId>
+      <StateNumber>1398</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="44" parent="25" name="pk_payments">
+      <ObjectId>19096</ObjectId>
+      <StateNumber>1398</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_payments</UnderlyingIndexName>
+    </key>
+    <column id="45" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1400</StateNumber>
+      <DefaultExpression>nextval(&apos;payment.registry_file_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="46" parent="26" name="reg_file_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>1400</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="47" parent="26" name="load_time">
+      <Position>3</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1400</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="48" parent="26" name="status">
+      <Position>4</Position>
+      <DataType>smallint|0s</DataType>
+      <StateNumber>1400</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <index id="49" parent="26" name="pk_registry_file">
+      <ObjectId>19111</ObjectId>
+      <StateNumber>1400</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="50" parent="26" name="pk_registry_file">
+      <ObjectId>19112</ObjectId>
+      <StateNumber>1400</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_registry_file</UnderlyingIndexName>
+    </key>
+    <column id="51" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1399</StateNumber>
+      <DefaultExpression>nextval(&apos;payment.registry_payments_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="52" parent="27" name="reg_file_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="53" parent="27" name="payment_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="54" parent="27" name="merchant_code">
+      <Position>4</Position>
+      <DataType>varchar(14)|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="55" parent="27" name="terminal">
+      <Position>5</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="56" parent="27" name="payment_order_num">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="57" parent="27" name="oper_date">
+      <Position>7</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="58" parent="27" name="payment_oper_date">
+      <Position>8</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="59" parent="27" name="oper_sum">
+      <Position>9</Position>
+      <DataType>money|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>790</TypeId>
+    </column>
+    <column id="60" parent="27" name="comiss_sum">
+      <Position>10</Position>
+      <DataType>money|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>790</TypeId>
+    </column>
+    <column id="61" parent="27" name="payment_order_sum">
+      <Position>11</Position>
+      <DataType>money|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>790</TypeId>
+    </column>
+    <column id="62" parent="27" name="card_num">
+      <Position>12</Position>
+      <DataType>varchar(21)|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="63" parent="27" name="auth_code">
+      <Position>13</Position>
+      <DataType>char(6)|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="64" parent="27" name="oper_type">
+      <Position>14</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>1399</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="65" parent="27" name="pk_registry_payments">
+      <ObjectId>19103</ObjectId>
+      <StateNumber>1399</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="66" parent="27" name="pk_registry_payments">
+      <ObjectId>19104</ObjectId>
+      <StateNumber>1399</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_registry_payments</UnderlyingIndexName>
+    </key>
+    <foreign-key id="67" parent="27" name="fk_payments_reference_registry_file">
+      <ObjectId>19118</ObjectId>
+      <StateNumber>1402</StateNumber>
+      <ColNames>reg_file_id</ColNames>
+      <RefTableId>19107</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>registry_file</RefTableName>
+      <RefKeyName>pk_registry_file</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+      <OnUpdate>restrict</OnUpdate>
+    </foreign-key>
+    <foreign-key id="68" parent="27" name="fk_payments_reference_payments">
+      <ObjectId>19113</ObjectId>
+      <StateNumber>1401</StateNumber>
+      <ColNames>payment_id</ColNames>
+      <RefTableId>19088</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>payments</RefTableName>
+      <RefKeyName>pk_payments</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+      <OnUpdate>restrict</OnUpdate>
+    </foreign-key>
   </database-model>
 </dataSource>

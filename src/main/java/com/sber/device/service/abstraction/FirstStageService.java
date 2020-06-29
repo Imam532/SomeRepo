@@ -5,7 +5,8 @@ import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 
 import javax.mail.MessagingException;
 import java.io.IOException;
+import java.util.List;
 
-public interface StartReconciliation {
-    boolean start() throws IOException, MessagingException, CsvRequiredFieldEmptyException, CsvDataTypeMismatchException;
+public interface FirstStageService {
+    void startFirstStage (List<Integer> regFileIds) throws CsvRequiredFieldEmptyException, IOException, CsvDataTypeMismatchException, MessagingException;
 }
