@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -18,31 +19,28 @@ public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private int merchant_id;        //compose key(ck)
+    private int invoice_id;
+    private int card_id;            //ck
 
-    private String merchant_id; //TODO in base has integer --fk3
-    private int invoice_id; //fk1
-    private int card_id; //fk2
-    private BigDecimal amount_micros;   //TODO in base has integer
 
-    @Column(length = 5)
-    private String currency;
-
-    private short status;
-
-    @Column(length = 50)
+    private int status;
     private String paysys_order_id;
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date created_at;
-    @Temporal(TemporalType.DATE)
-    private Date paysys_order_date;
-
-    @Column(length = 6)
-    private char auth_code;
-
-    @Column(length = 21)
-    private String card_num;
-    private String payment_url;
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date expiration;
-    private String uid;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date autocompletion_date;
+    @OneToOne
+    private Bundle bundle_id;          //ck
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date paysys_order_date;     //ck
+    private String ip;
+    private int bank_id;
+    private int card_ps_id;
+    private String expired;
+    private String holder;
+    private String visualname;
+
 }

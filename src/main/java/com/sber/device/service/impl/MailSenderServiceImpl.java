@@ -4,6 +4,7 @@ import com.sber.device.service.abstraction.MailSenderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import java.io.File;
 import java.io.IOException;
 
 @Service
@@ -32,7 +34,7 @@ public class MailSenderServiceImpl implements MailSenderService {
 
         msg.setSubject("Результат сверки");
         msg.setText("Сверка прошла успешно.");
-
+        msg.setFrom("mailsendertest532@gmail.com");
         javaMailSender.send(msg);
 
     }
@@ -41,24 +43,15 @@ public class MailSenderServiceImpl implements MailSenderService {
 
         MimeMessage msg = javaMailSender.createMimeMessage();
 
-        // true = multipart message
         MimeMessageHelper helper = new MimeMessageHelper(msg, true);
+
+        helper.setFrom("mailsendertest532@gmail.com");
         helper.setTo("imam532@mail.ru");
-
         helper.setSubject("Результат сверки");
+        helper.setText("Ошибка сверки, проверьте вложенный файл");
 
-
-        // true = text/html
-        helper.setText("<h1>Ошибка сверки!</h1> \n Проверьте вложенный файл", true);
-
-        //FileSystemResource file = new FileSystemResource(new File("classpath:android.png"));
-
-        //Resource resource = new ClassPathResource("android.png");
-        //InputStream input = resource.getInputStream();
-
-        //ResourceUtils.getFile("classpath:android.png");
-
-        helper.addAttachment("failFile.alt", new ClassPathResource(path));
+        FileSystemResource file = new FileSystemResource(new File(path));
+        helper.addAttachment("failFail.alt", file);
 
         javaMailSender.send(msg);
 

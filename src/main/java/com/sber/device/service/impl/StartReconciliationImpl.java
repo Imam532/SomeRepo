@@ -6,10 +6,12 @@ import com.sber.device.service.abstraction.FirstStageService;
 import com.sber.device.service.abstraction.PrepareReconciliation;
 import com.sber.device.service.abstraction.StartReconciliation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.mail.MessagingException;
 import java.io.IOException;
 
+@Service
 public class StartReconciliationImpl  implements StartReconciliation {
     private final PrepareReconciliation prepare;
     private final FirstStageService firstStageService;

@@ -12,15 +12,15 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-public class StartingController {
+public class PrepareController {
     private final PrepareReconciliation starting;
 
     @Autowired
-    public StartingController(PrepareReconciliation starting) {
+    public PrepareController(PrepareReconciliation starting) {
         this.starting = starting;
     }
 
-    @GetMapping("/start")
+    @GetMapping("/prepare")
     public List<Integer> isReady() throws IOException {
         return starting.isReconciliationReady();
     }

@@ -10,6 +10,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -46,9 +48,13 @@ class FileSearcherImplTest {
 
     @Test
     void testing() {
-        List<String> list = new ArrayList<>();
-        for(String s : list) {
-            System.out.println(s);
-        }
+        final String DATE_FORMAT = "ddMMYYYY";
+        DateFormat formatter = new SimpleDateFormat(DATE_FORMAT);
+
+
+
+        String formattedDate = formatter.format(new Date());
+
+        System.out.println(formattedDate);
     }
 }

@@ -19,6 +19,10 @@ public class PaymentServiceImpl implements PaymentService {
     }
     @Override
     public Payment findPayment(RegistryPayment registryPayment) {
-        return paymentDao.findPayment(registryPayment);
+       return paymentDao.getPayment(registryPayment.getMerchant_code(),
+               registryPayment.getOper_date(),
+               registryPayment.getAuth_code(),
+               registryPayment.getCard_num(),
+               registryPayment.getPayment_order_sum());
     }
 }

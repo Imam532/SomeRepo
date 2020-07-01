@@ -14,7 +14,7 @@ public class RegistryFileServiceImpl implements RegistryFileService {
     private final RegistryFileDao registryFileDao;
 
     @Autowired
-    public RegistryFileServiceImpl (RegistryFileDao registryFileDao) {
+    public RegistryFileServiceImpl(RegistryFileDao registryFileDao) {
         this.registryFileDao = registryFileDao;
     }
 
@@ -25,8 +25,18 @@ public class RegistryFileServiceImpl implements RegistryFileService {
     }
 
     @Override
-    public RegistryFile getFileByName(String fileName) {
+    public RegistryFile notProcessingFile(String fileName) {
         return registryFileDao.getRegistryFileByReg_file_name(fileName);
+    }
+
+    @Override
+    public void updateStatus(int status) {
+        registryFileDao.updateStatus(status);
+    }
+
+    @Override
+    public RegistryFile geFileById(Integer id) {
+        return registryFileDao.findById(id).get();
     }
 
     @Override

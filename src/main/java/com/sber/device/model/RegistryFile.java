@@ -2,14 +2,18 @@ package com.sber.device.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "registry_file")
-@Data
 @NoArgsConstructor
+@Data
 public class RegistryFile {
 
     @Id
@@ -29,4 +33,5 @@ public class RegistryFile {
         this.load_time = load_time;
         this.status = status;
     }
+
 }

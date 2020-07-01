@@ -19,32 +19,37 @@ public class FirstStageServiceImpl implements FirstStageService {
     private String failPath = "src/main/uploads/failed/failFile.csv";
     private String forACPath = "src/main/uploads/forAC/acFile.csv";
     private final String SBER_DEVICE_CODE = "sber_device";
+    private List<RegistryPayment> failedPayment = new ArrayList<>();
+    private List<RegistryPayment> forACfile = new ArrayList<>();
 
     private final PaymentService paymentService;
     private final MailSenderService mailSenderService;
-    private final BeanToCsvBuilderService csvBuilderService;
+    private final RegistryFileService registryFileService;
     private final RegistryPaymentService registryPaymentService;
-
+    private final BeanToCsvBuilderService beanToCsvBuilderService;
 
     @Autowired
     public FirstStageServiceImpl(PaymentService paymentService,
                                  MailSenderService mailSenderService,
-                                 BeanToCsvBuilderService csvBuilderService,
-                                 RegistryPaymentService registryPaymentService) {
+                                 RegistryFileService registryFileService,
+                                 RegistryPaymentService registryPaymentService,
+                                 BeanToCsvBuilderService beanToCsvBuilderService) {
         this.paymentService = paymentService;
         this.mailSenderService = mailSenderService;
-        this.csvBuilderService = csvBuilderService;
+        this.registryFileService = registryFileService;
         this.registryPaymentService = registryPaymentService;
+        this.beanToCsvBuilderService = beanToCsvBuilderService;
     }
 
     @Override
     public void startFirstStage(List<Integer> regFileIds) throws CsvRequiredFieldEmptyException, IOException, CsvDataTypeMismatchException, MessagingException {
-        List<RegistryPayment> failedPayment = new ArrayList<>();
-        List<RegistryPayment> forACfile = new ArrayList<>();
+        failedPayment = new ArrayList<>();
+        forACfile = new ArrayList<>();
         for(Integer id : regFileIds) {               //RegistryFile id -> list RegistryPayment
-            List<RegistryPayment> registryPayments = registryPaymentService.findByRegFileId(id);
+            List<RegistryPayment> registryPayments = registryPaymentService.findByRegFile(registryFileService.geFileById(id));
             for(RegistryPayment registryPayment: registryPayments) {
-                Payment payment = paymentService.findPayment(registryPayment);    //  RegistryPayment not Payment?
+                Payment payment = paymentService.findPayment(registryPayment);    //  RegistryPayment have Payment?
+                registryPaymentService.updatePaymentId(payment);                  //RegistryPayment.payment_id = Payment
                 if(payment == null) {                                            // Payment not found -> add RegistryPayment into fail list
                     failFlag = true;
                     registryPaymentService.updateMerchantCode(SBER_DEVICE_CODE);
@@ -56,13 +61,18 @@ public class FirstStageServiceImpl implements FirstStageService {
             }
         }
 
+        processByFlag(failFlag);
+        registryFileService.updateStatus(1); // when end process mark RegistryFile
+    }
+
+    private void processByFlag(boolean failFlag) throws CsvRequiredFieldEmptyException, IOException, CsvDataTypeMismatchException, MessagingException {
         if(failFlag) {
-            csvBuilderService.build(failedPayment, failPath);          // forming file with failed reconciliation
-            mailSenderService.sendEmailWithAttachment(failPath); //TODO file format *.alt
+            beanToCsvBuilderService.build(failedPayment, failPath);          // forming file *.csv with failed reconciliation
+            mailSenderService.sendEmailWithAttachment(failPath);         //format .alt formed by MailSenderService during send mail
 
         } else {
+            beanToCsvBuilderService.build(forACfile, forACPath);          // forming file *.csv for "AC расчетные решения"
             mailSenderService.sendEmail();                    //send mail  if reconciliation success
         }
-        csvBuilderService.build(forACfile, forACPath);          // forming file for "AC расчетные решения"
     }
 }
