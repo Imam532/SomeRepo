@@ -5,5 +5,5 @@ import com.sber.device.model.RegistryFile;
 import com.sber.device.model.RegistryPayment;
 
 public interface PaymentService {
-    Payment findPayment(RegistryPayment registryPayment);
+    Payment findPayment(int id);
 }

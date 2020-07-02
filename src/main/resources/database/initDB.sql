@@ -58,7 +58,7 @@ create table payment.registry_payments
     id                serial      not null,
     reg_file_id       integer     null,
     payment_id        integer     null,
-    merchant_code     varchar(14) null,
+    merchant_code     integer     null,
     terminal          varchar(8)  null,
     payment_order_num integer     null,
     oper_date         timestamptz null,

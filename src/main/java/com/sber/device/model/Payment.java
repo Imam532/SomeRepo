@@ -33,6 +33,7 @@ public class Payment {
     @Temporal(TemporalType.TIMESTAMP)
     private Date autocompletion_date;
     @OneToOne
+    @JoinColumn(name = "bundle_id", referencedColumnName = "id")
     private Bundle bundle_id;          //ck
     @Temporal(TemporalType.TIMESTAMP)
     private Date paysys_order_date;     //ck

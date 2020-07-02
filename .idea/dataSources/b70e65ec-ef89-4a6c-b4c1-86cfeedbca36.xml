@@ -7,15 +7,15 @@
     <database id="2" parent="1" name="SberDevice">
       <ObjectId>17295</ObjectId>
       <Owner>root</Owner>
-      <IntrospectionStateNumber>1769</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2285</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|18398|18400|1
 sequence|table|18409|18411|1
 sequence|table|18417|18419|1
-sequence|table|20514|20516|1
-sequence|table|20522|20524|1
-sequence|table|20530|20532|1
-sequence|table|20541|20543|1
+sequence|table|21904|21906|1
+sequence|table|21912|21914|1
+sequence|table|21920|21922|1
+sequence|table|21931|21933|1
 </Relations>
     </database>
     <database id="3" parent="1" name="TestService">
@@ -80,10 +80,10 @@ sequence|table|20541|20543|1
       <Owner>postgres</Owner>
     </schema>
     <schema id="13" parent="2" name="payment">
-      <ObjectId>20513</ObjectId>
-      <StateNumber>1757</StateNumber>
+      <ObjectId>21903</ObjectId>
+      <StateNumber>2274</StateNumber>
       <Owner>root</Owner>
-      <IntrospectionStateNumber>1770</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2286</IntrospectionStateNumber>
     </schema>
     <schema id="14" parent="2" name="pg_catalog">
       <ObjectId>11</ObjectId>
@@ -155,87 +155,87 @@ sequence|table|20541|20543|1
       <SchemaId>11</SchemaId>
     </extension>
     <sequence id="23" parent="13" name="bundle_id_seq">
-      <ObjectId>20514</ObjectId>
-      <StateNumber>1758</StateNumber>
+      <ObjectId>21904</ObjectId>
+      <StateNumber>2275</StateNumber>
       <Owner>root</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="24" parent="13" name="payments_id_seq">
-      <ObjectId>20522</ObjectId>
-      <StateNumber>1759</StateNumber>
+      <ObjectId>21912</ObjectId>
+      <StateNumber>2276</StateNumber>
       <Owner>root</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="25" parent="13" name="registry_file_id_seq">
-      <ObjectId>20541</ObjectId>
-      <StateNumber>1761</StateNumber>
+      <ObjectId>21931</ObjectId>
+      <StateNumber>2278</StateNumber>
       <Owner>root</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="26" parent="13" name="registry_payments_id_seq">
-      <ObjectId>20530</ObjectId>
-      <StateNumber>1760</StateNumber>
+      <ObjectId>21920</ObjectId>
+      <StateNumber>2277</StateNumber>
       <Owner>root</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <table id="27" parent="13" name="bundle">
-      <ObjectId>20516</ObjectId>
+      <ObjectId>21906</ObjectId>
       <Owner>root</Owner>
-      <StateNumber>1764</StateNumber>
+      <StateNumber>2281</StateNumber>
     </table>
     <table id="28" parent="13" name="payments">
-      <ObjectId>20524</ObjectId>
+      <ObjectId>21914</ObjectId>
       <Owner>root</Owner>
-      <StateNumber>1764</StateNumber>
+      <StateNumber>2281</StateNumber>
     </table>
     <table id="29" parent="13" name="registry_file">
-      <ObjectId>20543</ObjectId>
+      <ObjectId>21933</ObjectId>
       <Owner>root</Owner>
-      <StateNumber>1763</StateNumber>
+      <StateNumber>2280</StateNumber>
     </table>
     <table id="30" parent="13" name="registry_payments">
-      <ObjectId>20532</ObjectId>
+      <ObjectId>21922</ObjectId>
       <Owner>root</Owner>
-      <StateNumber>1763</StateNumber>
+      <StateNumber>2280</StateNumber>
     </table>
     <column id="31" parent="27" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1758</StateNumber>
+      <StateNumber>2275</StateNumber>
       <DefaultExpression>nextval(&apos;payment.bundle_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="32" parent="27" name="amount">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>1758</StateNumber>
+      <StateNumber>2275</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="33" parent="27" name="currency">
       <Position>3</Position>
       <DataType>varchar(5)|0s</DataType>
-      <StateNumber>1758</StateNumber>
+      <StateNumber>2275</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="34" parent="27" name="pk_bundle">
-      <ObjectId>20520</ObjectId>
-      <StateNumber>1758</StateNumber>
+      <ObjectId>21910</ObjectId>
+      <StateNumber>2275</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="35" parent="27" name="pk_bundle">
-      <ObjectId>20521</ObjectId>
-      <StateNumber>1758</StateNumber>
+      <ObjectId>21911</ObjectId>
+      <StateNumber>2275</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_bundle</UnderlyingIndexName>
@@ -244,125 +244,125 @@ sequence|table|20541|20543|1
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <DefaultExpression>nextval(&apos;payment.payments_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="37" parent="28" name="merchant_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="38" parent="28" name="invoice_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="39" parent="28" name="card_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="40" parent="28" name="status">
       <Position>5</Position>
       <DataType>smallint|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>21</TypeId>
     </column>
     <column id="41" parent="28" name="paysys_order_id">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="42" parent="28" name="created_at">
       <Position>7</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>1184</TypeId>
     </column>
     <column id="43" parent="28" name="expiration">
       <Position>8</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>1184</TypeId>
     </column>
     <column id="44" parent="28" name="autocompletion_date">
       <Position>9</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>1184</TypeId>
     </column>
     <column id="45" parent="28" name="bundle_id">
       <Position>10</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="46" parent="28" name="paysys_order_date">
       <Position>11</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>1184</TypeId>
     </column>
     <column id="47" parent="28" name="ip">
       <Position>12</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="48" parent="28" name="bank_id">
       <Position>13</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="49" parent="28" name="card_ps_id">
       <Position>14</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="50" parent="28" name="expired">
       <Position>15</Position>
       <DataType>varchar(10)|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="51" parent="28" name="holder">
       <Position>16</Position>
       <DataType>varchar(100)|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="52" parent="28" name="visualname">
       <Position>17</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>1759</StateNumber>
+      <StateNumber>2276</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="53" parent="28" name="pk_payments">
-      <ObjectId>20528</ObjectId>
-      <StateNumber>1759</StateNumber>
+      <ObjectId>21918</ObjectId>
+      <StateNumber>2276</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="54" parent="28" name="pk_payments">
-      <ObjectId>20529</ObjectId>
-      <StateNumber>1759</StateNumber>
+      <ObjectId>21919</ObjectId>
+      <StateNumber>2276</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_payments</UnderlyingIndexName>
     </key>
     <foreign-key id="55" parent="28" name="fk_payments_reference_bundle">
-      <ObjectId>20559</ObjectId>
-      <StateNumber>1764</StateNumber>
+      <ObjectId>21949</ObjectId>
+      <StateNumber>2281</StateNumber>
       <ColNames>bundle_id</ColNames>
-      <RefTableId>20516</RefTableId>
+      <RefTableId>21906</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>bundle</RefTableName>
       <RefKeyName>pk_bundle</RefKeyName>
@@ -374,38 +374,38 @@ sequence|table|20541|20543|1
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1761</StateNumber>
+      <StateNumber>2278</StateNumber>
       <DefaultExpression>nextval(&apos;payment.registry_file_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="57" parent="29" name="reg_file_name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>1761</StateNumber>
+      <StateNumber>2278</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="58" parent="29" name="load_time">
       <Position>3</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1761</StateNumber>
+      <StateNumber>2278</StateNumber>
       <TypeId>1184</TypeId>
     </column>
     <column id="59" parent="29" name="status">
       <Position>4</Position>
       <DataType>smallint|0s</DataType>
-      <StateNumber>1761</StateNumber>
+      <StateNumber>2278</StateNumber>
       <TypeId>21</TypeId>
     </column>
     <index id="60" parent="29" name="pk_registry_file">
-      <ObjectId>20547</ObjectId>
-      <StateNumber>1761</StateNumber>
+      <ObjectId>21937</ObjectId>
+      <StateNumber>2278</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="61" parent="29" name="pk_registry_file">
-      <ObjectId>20548</ObjectId>
-      <StateNumber>1761</StateNumber>
+      <ObjectId>21938</ObjectId>
+      <StateNumber>2278</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_registry_file</UnderlyingIndexName>
@@ -414,107 +414,107 @@ sequence|table|20541|20543|1
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <DefaultExpression>nextval(&apos;payment.registry_payments_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="63" parent="30" name="reg_file_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="64" parent="30" name="payment_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="65" parent="30" name="merchant_code">
       <Position>4</Position>
-      <DataType>varchar(14)|0s</DataType>
-      <StateNumber>1760</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2277</StateNumber>
+      <TypeId>23</TypeId>
     </column>
     <column id="66" parent="30" name="terminal">
       <Position>5</Position>
       <DataType>varchar(8)|0s</DataType>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="67" parent="30" name="payment_order_num">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="68" parent="30" name="oper_date">
       <Position>7</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <TypeId>1184</TypeId>
     </column>
     <column id="69" parent="30" name="payment_oper_date">
       <Position>8</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <TypeId>1184</TypeId>
     </column>
     <column id="70" parent="30" name="oper_sum">
       <Position>9</Position>
       <DataType>numeric|0s</DataType>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <TypeId>1700</TypeId>
     </column>
     <column id="71" parent="30" name="comiss_sum">
       <Position>10</Position>
       <DataType>numeric|0s</DataType>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <TypeId>1700</TypeId>
     </column>
     <column id="72" parent="30" name="payment_order_sum">
       <Position>11</Position>
       <DataType>numeric|0s</DataType>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <TypeId>1700</TypeId>
     </column>
     <column id="73" parent="30" name="card_num">
       <Position>12</Position>
       <DataType>varchar(21)|0s</DataType>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="74" parent="30" name="auth_code">
       <Position>13</Position>
       <DataType>char(6)|0s</DataType>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <TypeId>1042</TypeId>
     </column>
     <column id="75" parent="30" name="oper_type">
       <Position>14</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>1760</StateNumber>
+      <StateNumber>2277</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="76" parent="30" name="pk_registry_payments">
-      <ObjectId>20539</ObjectId>
-      <StateNumber>1760</StateNumber>
+      <ObjectId>21929</ObjectId>
+      <StateNumber>2277</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="77" parent="30" name="pk_registry_payments">
-      <ObjectId>20540</ObjectId>
-      <StateNumber>1760</StateNumber>
+      <ObjectId>21930</ObjectId>
+      <StateNumber>2277</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pk_registry_payments</UnderlyingIndexName>
     </key>
     <foreign-key id="78" parent="30" name="fk_payments_reference_registry_file">
-      <ObjectId>20554</ObjectId>
-      <StateNumber>1763</StateNumber>
+      <ObjectId>21944</ObjectId>
+      <StateNumber>2280</StateNumber>
       <ColNames>reg_file_id</ColNames>
-      <RefTableId>20543</RefTableId>
+      <RefTableId>21933</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>registry_file</RefTableName>
       <RefKeyName>pk_registry_file</RefKeyName>
@@ -523,10 +523,10 @@ sequence|table|20541|20543|1
       <OnUpdate>restrict</OnUpdate>
     </foreign-key>
     <foreign-key id="79" parent="30" name="fk_payments_reference_payments">
-      <ObjectId>20549</ObjectId>
-      <StateNumber>1762</StateNumber>
+      <ObjectId>21939</ObjectId>
+      <StateNumber>2279</StateNumber>
       <ColNames>payment_id</ColNames>
-      <RefTableId>20524</RefTableId>
+      <RefTableId>21914</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>payments</RefTableName>
       <RefKeyName>pk_payments</RefKeyName>

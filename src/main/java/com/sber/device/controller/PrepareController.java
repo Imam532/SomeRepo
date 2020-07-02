@@ -1,5 +1,6 @@
 package com.sber.device.controller;
 
+import com.opencsv.exceptions.CsvException;
 import com.sber.device.model.RegistryFile;
 import com.sber.device.service.abstraction.PrepareReconciliation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
 
@@ -21,7 +23,7 @@ public class PrepareController {
     }
 
     @GetMapping("/prepare")
-    public List<Integer> isReady() throws IOException {
+    public List<Integer> isReady() throws IOException, CsvException, ParseException {
         return starting.isReconciliationReady();
     }
 

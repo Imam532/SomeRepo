@@ -1,5 +1,6 @@
 package com.sber.device.service.impl;
 
+import com.opencsv.exceptions.CsvException;
 import com.sber.device.model.RegistryFile;
 import com.sber.device.model.RegistryPayment;
 import com.sber.device.service.abstraction.*;
@@ -12,6 +13,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,15 +26,15 @@ public class PrepareReconciliationImpl implements PrepareReconciliation {
     private List<File> files = new ArrayList<>();
     private List<RegistryPayment> registryPayments = new ArrayList<>();
 
-    private final XlsxParser parser;
     private final FileSearcher searcher;
+    private final CSVParserService parser;
     private final RegistryFileService registryFileService;
     private final RegistryPaymentService registryPaymentService;
 
 
     @Autowired
-    public PrepareReconciliationImpl(XlsxParser parser,
-                                     FileSearcher searcher,
+    public PrepareReconciliationImpl(FileSearcher searcher,
+                                     CSVParserService parser,
                                      RegistryFileService registryFileService,
                                      RegistryPaymentService registryPaymentService
     ) {
@@ -43,9 +45,16 @@ public class PrepareReconciliationImpl implements PrepareReconciliation {
 
     }
 
-
+    /**
+     * Подготовка к сверке. Поиск файлов по маске, сохранение параметров файла в БД(RegistryFile)
+     * Парсинг файла для получения списков RegistryPayment и сохранение их в БД
+     * @return List Registry File id's
+     * @throws IOException
+     * @throws CsvException
+     * @throws ParseException
+     */
     @Override
-    public List<Integer> isReconciliationReady() throws IOException {
+    public List<Integer> isReconciliationReady() throws IOException, CsvException, ParseException {
         List<Integer> regFileIds = new ArrayList<>();
         files = searcher.searchFile();
 
@@ -53,9 +62,9 @@ public class PrepareReconciliationImpl implements PrepareReconciliation {
             if (registryFileService.processingFile(file.getName()) != null) {
                 System.out.println("Файл уже обработан");//TODO что делать если файл обозначен что в обработке?
             } else {
-                Date date = new Date();                                         //TODO change this?
+                Date date = new Date();
                 registryPayments = parser.parseFile(file);                         //file -> list of RegistryPayment
-                registryFile = new RegistryFile(file.getName(), date, 0);
+                registryFile = new RegistryFile(file.getName(), date, 0);   //status still 0, because Reconciliation not finished
                 registryFileService.save(registryFile);             //save RegistryFile entity in BD, file in processing;
                 registryFile = registryFileService.notProcessingFile(file.getName());  //TODO may be delete this row?
                 if (registryFile != null) {
@@ -78,13 +87,11 @@ public class PrepareReconciliationImpl implements PrepareReconciliation {
 
     private void saveFile(File file) throws IOException {
         final String DATE_FORMAT = "ddMMYYYY";
-        DateFormat formatter = new SimpleDateFormat(DATE_FORMAT);
-        String formattedDate = formatter.format(new Date());
+        String formattedDate = new SimpleDateFormat(DATE_FORMAT).format(new Date());
 
         String path = "src/main/uploads/changed/";
         String fileName = FilenameUtils.removeExtension(file.getName()) + "_" + formattedDate + ".res";
         File copyingFile = new File(path + fileName);
         Files.copy(file.toPath(), copyingFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-
     }
 }

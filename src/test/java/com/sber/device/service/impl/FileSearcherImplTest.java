@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.text.DateFormat;
@@ -48,13 +49,11 @@ class FileSearcherImplTest {
 
     @Test
     void testing() {
-        final String DATE_FORMAT = "ddMMYYYY";
-        DateFormat formatter = new SimpleDateFormat(DATE_FORMAT);
+        String number = "-4334.00";
+            Long d = Long.valueOf(number.replace(".", "").trim());
+
+            System.out.println(d);
 
 
-
-        String formattedDate = formatter.format(new Date());
-
-        System.out.println(formattedDate);
     }
 }

@@ -41,28 +41,36 @@ public class FirstStageServiceImpl implements FirstStageService {
         this.beanToCsvBuilderService = beanToCsvBuilderService;
     }
 
+    /**
+     * Первый этап сверки
+     * @param regFileIds
+     * @throws CsvRequiredFieldEmptyException
+     * @throws IOException
+     * @throws CsvDataTypeMismatchException
+     * @throws MessagingException
+     */
     @Override
     public void startFirstStage(List<Integer> regFileIds) throws CsvRequiredFieldEmptyException, IOException, CsvDataTypeMismatchException, MessagingException {
         failedPayment = new ArrayList<>();
         forACfile = new ArrayList<>();
-        for(Integer id : regFileIds) {               //RegistryFile id -> list RegistryPayment
-            List<RegistryPayment> registryPayments = registryPaymentService.findByRegFile(registryFileService.geFileById(id));
-            for(RegistryPayment registryPayment: registryPayments) {
-                Payment payment = paymentService.findPayment(registryPayment);    //  RegistryPayment have Payment?
-                registryPaymentService.updatePaymentId(payment);                  //RegistryPayment.payment_id = Payment
-                if(payment == null) {                                            // Payment not found -> add RegistryPayment into fail list
-                    failFlag = true;
-                    registryPaymentService.updateMerchantCode(SBER_DEVICE_CODE);
-                    failedPayment.add(registryPayment);                     // only failed RegistryPayment for bank manager
-                    forACfile.add(registryPayment);                       //AC file include all RegistryPayment
-                } else {                                                  //RegistryPayment has Payment -> write success list
-                    forACfile.add(registryPayment);
-                }
-            }
-        }
-
-        processByFlag(failFlag);
-        registryFileService.updateStatus(1); // when end process mark RegistryFile
+//        for(Integer id : regFileIds) {               //RegistryFile id -> list RegistryPayment
+//            List<RegistryPayment> registryPayments = registryPaymentService.findByRegFile(registryFileService.geFileById(id));
+//            for(RegistryPayment registryPayment: registryPayments) {
+//                Payment payment = paymentService.findPayment(registryPayment);    //  RegistryPayment have Payment?
+//                registryPaymentService.updatePaymentId(payment);                  //RegistryPayment.payment_id = Payment
+//                if(payment == null) {                                            // Payment not found -> add RegistryPayment into fail list
+//                    failFlag = true;
+//                    registryPaymentService.updateMerchantCode(SBER_DEVICE_CODE);
+//                    failedPayment.add(registryPayment);                     // only failed RegistryPayment for bank manager
+//                    forACfile.add(registryPayment);                       //AC file include all RegistryPayment
+//                } else {                                                  //RegistryPayment has Payment -> write success list
+//                    forACfile.add(registryPayment);
+//                }
+//            }
+//        }
+//
+//        processByFlag(failFlag);
+//        registryFileService.updateStatus(1); // when end process mark RegistryFile
     }
 
     private void processByFlag(boolean failFlag) throws CsvRequiredFieldEmptyException, IOException, CsvDataTypeMismatchException, MessagingException {

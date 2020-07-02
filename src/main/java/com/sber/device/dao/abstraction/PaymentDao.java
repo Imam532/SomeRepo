@@ -26,15 +26,6 @@ public interface PaymentDao extends CrudRepository<Payment, Integer> {
 //            "a.amount_micros = :#{#record.oper_sum}")
 //    Payment findPayment(@Param("record") RegistryPayment record);
 
-    @Query("select payments from Payment payments where payments.merchant_id = ?1 and " +
-            "payments.paysys_order_date = ?2 and " +
-            "payments.auth_code = ?3 and " +
-            "payments.card_num = ?4 and " +
-            "payments.bundle_id = (select bundle from Bundle bundle where bundle.amount = ?5)")
-    Payment getPayment(String merchant_code,
-                       Date oper_date,
-                       String auth_code,
-                       String card_num,
-                       long amount_micros);
-
+    @Query("select payments from Payment payments where payments.id = ?1")
+    Payment getPayment(int id);
 }
