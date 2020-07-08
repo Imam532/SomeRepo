@@ -11,14 +11,14 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "registry_file")
+@Table(name = "registry_file", schema ="payment")
 @NoArgsConstructor
 @Data
 public class RegistryFile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column(length = 50)
     private String reg_file_name;
@@ -26,7 +26,7 @@ public class RegistryFile {
     private Date load_time;
 
     @Column(length = 2)
-    private int status;
+    private Integer status;
 
     public RegistryFile(String reg_file_name, Date load_time, Integer status) {
         this.reg_file_name = reg_file_name;

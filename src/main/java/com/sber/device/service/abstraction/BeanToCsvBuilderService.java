@@ -10,6 +10,5 @@ import java.io.IOException;
 import java.util.List;
 
 public interface BeanToCsvBuilderService {
-    void build(List<RegistryPayment> registryPayments, String path)
-            throws IOException, CsvDataTypeMismatchException, CsvRequiredFieldEmptyException;
+    void build(List<RegistryPayment> registryPayments, String path);
 }

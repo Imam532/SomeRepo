@@ -4,5 +4,5 @@ import java.io.File;
 import java.io.IOException;
 
 public interface ConvertXLSXToCSVService {
-     File convertXLXSFileToCSV(File xlsxFile) throws IOException;
+     File convertXLXSFileToCSV(File xlsxFile);
 }

@@ -1,23 +1,17 @@
 package com.sber.device.service.impl;
 
 import com.sber.device.service.abstraction.FileSearcher;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class FileSearcherImplTest {
 
@@ -29,12 +23,10 @@ class FileSearcherImplTest {
     void searchFile() throws IOException {
         FileSearcher searcher = new FileSearcherImpl();
         List<File> files = null;
-        try {
-            files = searcher.searchFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        for(File file: files) {
+
+        files = searcher.searchFile();
+
+        for (File file : files) {
             String path = "src/main/uploads/changed/";
             String fileName = FilenameUtils.removeExtension(file.getName()) + ".res";
             System.out.println(file.getPath());
@@ -50,9 +42,9 @@ class FileSearcherImplTest {
     @Test
     void testing() {
         String number = "-4334.00";
-            Long d = Long.valueOf(number.replace(".", "").trim());
+        Long d = Long.valueOf(number.replace(".", "").trim());
 
-            System.out.println(d);
+        System.out.println(d);
 
 
     }

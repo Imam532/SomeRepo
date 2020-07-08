@@ -8,5 +8,5 @@ import java.text.ParseException;
 import java.util.List;
 
 public interface PrepareReconciliation {
-    List<Integer> isReconciliationReady() throws IOException, CsvException, ParseException;
+    List<Integer> isReconciliationReady();
 }

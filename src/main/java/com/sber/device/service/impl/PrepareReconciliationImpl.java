@@ -5,6 +5,8 @@ import com.sber.device.model.RegistryFile;
 import com.sber.device.model.RegistryPayment;
 import com.sber.device.service.abstraction.*;
 import org.apache.commons.io.FilenameUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,7 @@ import java.util.List;
 
 @Service
 public class PrepareReconciliationImpl implements PrepareReconciliation {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private RegistryFile registryFile;
     private List<File> files = new ArrayList<>();
@@ -54,7 +57,9 @@ public class PrepareReconciliationImpl implements PrepareReconciliation {
      * @throws ParseException
      */
     @Override
-    public List<Integer> isReconciliationReady() throws IOException, CsvException, ParseException {
+    public List<Integer> isReconciliationReady() {
+        logger.trace("Preparing to reconciliation");
+
         List<Integer> regFileIds = new ArrayList<>();
         files = searcher.searchFile();
 
@@ -67,6 +72,7 @@ public class PrepareReconciliationImpl implements PrepareReconciliation {
                 registryFile = new RegistryFile(file.getName(), date, 0);   //status still 0, because Reconciliation not finished
                 registryFileService.save(registryFile);             //save RegistryFile entity in BD, file in processing;
                 registryFile = registryFileService.notProcessingFile(file.getName());  //TODO may be delete this row?
+
                 if (registryFile != null) {
                     for (RegistryPayment registryPayment : registryPayments) {
                         registryPayment.setReg_file_id(registryFile);
@@ -77,11 +83,18 @@ public class PrepareReconciliationImpl implements PrepareReconciliation {
                      * Но в dev используем копирование в новую директорию
                      */
 //                file.renameTo(new File(file.getParentFile(), FilenameUtils.removeExtension(file.getName()) + ".res"));
-                    saveFile(file);
+
+                    try {
+                        saveFile(file);
+                    } catch (IOException e) {
+                        logger.error("Error while trying save renamed file to directory", e);
+                        e.printStackTrace();
+                    }
                 }
                 regFileIds.add(registryFile.getId());
             }
         }
+        logger.trace("Files is proceeded and saved. Beans created and persist to database");
         return regFileIds;
     }
 

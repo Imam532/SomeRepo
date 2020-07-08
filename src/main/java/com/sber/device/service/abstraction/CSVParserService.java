@@ -11,5 +11,5 @@ import java.text.ParseException;
 import java.util.List;
 
 public interface CSVParserService {
-    List<RegistryPayment> parseFile(File file) throws IOException, CsvException, ParseException;
+    List<RegistryPayment> parseFile(File file);
 }

@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="636e6d78-9088-4d04-9536-ca62b0d8b6e8" name="Default Changelist" comment="" />
+    <list default="true" id="636e6d78-9088-4d04-9536-ca62b0d8b6e8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36/storage_v2/_src_/database/SberDevice.0kwv-g/schema/payment.BjIc0Q.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36/storage_v2/_src_/database/SberDevice.0kwv-g/schema/payment.BjIc0Q.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36/storage_v2/_src_/database/SberDevice.0kwv-g/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36/storage_v2/_src_/database/SberDevice.0kwv-g/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/controller/PrepareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/controller/PrepareController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/dao/abstraction/PaymentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/dao/abstraction/PaymentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/model/Bundle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/model/Bundle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/model/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/model/RegistryFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/model/RegistryFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/model/RegistryPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/model/RegistryPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/BeanToCsvBuilderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/BeanToCsvBuilderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/CSVParserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/CSVParserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/ConvertXLSXToCSVService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/ConvertXLSXToCSVService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/FileSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/FileSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/FirstStageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/FirstStageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/MailSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/MailSenderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/PrepareReconciliation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/PrepareReconciliation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/BeanToCsvBuilderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/BeanToCsvBuilderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/CSVParserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/CSVParserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/ConvertXLSXToCSVServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/ConvertXLSXToCSVServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/FileSearcherImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/FileSearcherImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/FirstStageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/FirstStageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/MailSenderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/MailSenderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/PaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/PrepareReconciliationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/PrepareReconciliationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/RegistryFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/RegistryFileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/RegistryPaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/RegistryPaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/StartReconciliationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/StartReconciliationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/XmlUnmarshallerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/XmlUnmarshallerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/uploads/77XXXXXXXX_XXXXXX_XXXXXXXXXXXXX_171209_755928.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/uploads/77XXXXXXXX_XXXXXX_XXXXXXXXXXXXX_171209_755928.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sber/device/service/impl/FileSearcherImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sber/device/service/impl/FileSearcherImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/dao/abstraction/PaymentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/dao/abstraction/PaymentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/model/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/model/Payment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/model/RegistryFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/model/RegistryFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/model/RegistryPayment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/model/RegistryPayment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/service/abstraction/FileSearcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/service/abstraction/FileSearcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/FileSearcherImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/FileSearcherImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/RegistryFileServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/RegistryFileServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/RegistryPaymentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/RegistryPaymentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/StartReconciliationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/StartReconciliationImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/XmlUnmarshallerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/XmlUnmarshallerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sber/device/service/impl/FileSearcherImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sber/device/service/impl/FileSearcherImplTest.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +104,36 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="payment: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SberDevice@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SberDevice: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="payment: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="bundle: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SberDevice@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SberDevice: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="payment: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="payments: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SberDevice@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SberDevice: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="payment: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="registry_payments: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
     </expand>
     <select />
@@ -253,26 +329,7 @@
       <serviceView>
         <option name="contentProportion" value="0.14877868" />
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18fd0c25" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18fd0c25" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e0d0bba4" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18fd0c25" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d9720e33" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d0f13ed2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -300,6 +357,11 @@
       <workItem from="1593527518601" duration="5433000" />
       <workItem from="1593538080377" duration="36453000" />
       <workItem from="1593673194341" duration="35554000" />
+      <workItem from="1593761563125" duration="9223000" />
+      <workItem from="1593845574584" duration="1199000" />
+      <workItem from="1593964422711" duration="2650000" />
+      <workItem from="1594018674871" duration="24696000" />
+      <workItem from="1594194568797" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="working app 0.1">
       <created>1593369670425</created>
@@ -322,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593619576775</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merged into dev worked prepare">
+      <created>1593721937123</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593721937123</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +414,8 @@
     <MESSAGE value="working app 0.1" />
     <MESSAGE value="BeforeTesting" />
     <MESSAGE value="New version" />
-    <option name="LAST_COMMIT_MESSAGE" value="New version" />
+    <MESSAGE value="Merged into dev worked prepare" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merged into dev worked prepare" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -372,7 +442,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/StartReconciliationImpl.java</url>
-          <line>27</line>
+          <line>25</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -406,9 +476,19 @@
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/CSVParserServiceImpl.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="48" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/sber/device/controller/PrepareController.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/PaymentServiceImpl.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/PaymentServiceImpl.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -8,5 +8,5 @@ import java.io.IOException;
 import java.util.List;
 
 public interface FirstStageService {
-    void startFirstStage (List<Integer> regFileIds) throws CsvRequiredFieldEmptyException, IOException, CsvDataTypeMismatchException, MessagingException;
+    void startFirstStage (List<Integer> regFileIds);
 }

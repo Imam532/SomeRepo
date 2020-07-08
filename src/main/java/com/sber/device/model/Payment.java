@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
-@Table(name = "payments")
+@Table(name = "payments", schema ="payment")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,13 +18,13 @@ public class Payment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private int merchant_id;        //compose key(ck)
-    private int invoice_id;
-    private int card_id;            //ck
+    private Integer id;
+    private Integer merchant_id;        //compose key(ck)
+    private Integer invoice_id;
+    private Integer card_id;            //ck
 
 
-    private int status;
+    private Integer status;
     private String paysys_order_id;
     @Temporal(TemporalType.TIMESTAMP)
     private Date created_at;
@@ -32,14 +32,15 @@ public class Payment {
     private Date expiration;
     @Temporal(TemporalType.TIMESTAMP)
     private Date autocompletion_date;
-    @OneToOne
-    @JoinColumn(name = "bundle_id", referencedColumnName = "id")
-    private Bundle bundle_id;          //ck
+
+    @OneToOne(fetch = FetchType.EAGER)
+    @MapsId("id")
+    private Bundle bundle;          //ck
     @Temporal(TemporalType.TIMESTAMP)
     private Date paysys_order_date;     //ck
     private String ip;
-    private int bank_id;
-    private int card_ps_id;
+    private Integer bank_id;
+    private Integer card_ps_id;
     private String expired;
     private String holder;
     private String visualname;

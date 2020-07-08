@@ -7,6 +7,6 @@ public interface MailSenderService {
 
     void sendEmail();
 
-    void sendEmailWithAttachment(String path) throws MessagingException, IOException;
+    void sendEmailWithAttachment(String path);
 
 }

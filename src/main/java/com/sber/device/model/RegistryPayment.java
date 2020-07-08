@@ -13,7 +13,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "registry_payments")
+@Table(name = "registry_payments", schema ="payment")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,7 +22,7 @@ public class RegistryPayment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @ManyToOne(fetch = FetchType.EAGER, targetEntity = RegistryFile.class)
     @JoinColumn(name = "reg_file_id")
@@ -33,7 +33,7 @@ public class RegistryPayment {
     private Payment payment_id;
 
     //    @Column(length = 14)
-    private int merchant_code;
+    private Integer merchant_code;
 
     //    @Column(length = 8)
     private String terminal;
@@ -41,7 +41,7 @@ public class RegistryPayment {
     @Temporal(TemporalType.TIMESTAMP)
     private Date oper_date;
 
-    private int payment_order_num;
+    private Integer payment_order_num;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date payment_oper_date;

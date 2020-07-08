@@ -5,5 +5,5 @@ import java.io.IOException;
 import java.util.List;
 
 public interface FileSearcher {
-    public List<File>  searchFile() throws IOException;
+    public List<File>  searchFile();
 }
