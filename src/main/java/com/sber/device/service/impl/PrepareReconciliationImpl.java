@@ -14,7 +14,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -65,13 +64,14 @@ public class PrepareReconciliationImpl implements PrepareReconciliation {
 
         for (File file : files) {                                                  //forEach file -> XlsxParser
             if (registryFileService.processingFile(file.getName()) != null) {
-                System.out.println("Файл уже обработан");//TODO что делать если файл обозначен что в обработке?
+                logger.warn("Not fount  RegistryFile's for processing");
+                System.out.println("Файл уже обработан");
             } else {
                 Date date = new Date();
                 registryPayments = parser.parseFile(file);                         //file -> list of RegistryPayment
                 registryFile = new RegistryFile(file.getName(), date, 0);   //status still 0, because Reconciliation not finished
                 registryFileService.save(registryFile);             //save RegistryFile entity in BD, file in processing;
-                registryFile = registryFileService.notProcessingFile(file.getName());  //TODO may be delete this row?
+                registryFile = registryFileService.notProcessingFile(file.getName());
 
                 if (registryFile != null) {
                     for (RegistryPayment registryPayment : registryPayments) {

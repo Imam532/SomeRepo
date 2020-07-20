@@ -2,51 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="636e6d78-9088-4d04-9536-ca62b0d8b6e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/initdb.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/RemoteFileSystemManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/SecondStageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/RemoteFileSystemManagerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/SecondStageServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36/storage_v2/_src_/database/SberDevice.0kwv-g/schema/payment.BjIc0Q.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36/storage_v2/_src_/database/SberDevice.0kwv-g/schema/payment.BjIc0Q.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36/storage_v2/_src_/database/SberDevice.0kwv-g/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36/storage_v2/_src_/database/SberDevice.0kwv-g/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b70e65ec-ef89-4a6c-b4c1-86cfeedbca36/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/controller/PrepareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/controller/PrepareController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/dao/abstraction/PaymentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/dao/abstraction/PaymentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/model/Bundle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/model/Bundle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/model/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/model/RegistryFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/model/RegistryFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/model/RegistryPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/model/RegistryPayment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/BeanToCsvBuilderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/BeanToCsvBuilderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/CSVParserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/CSVParserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/ConvertXLSXToCSVService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/ConvertXLSXToCSVService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/FileSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/FileSearcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/FirstStageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/FirstStageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/MailSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/MailSenderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/PrepareReconciliation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/abstraction/PrepareReconciliation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/BeanToCsvBuilderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/BeanToCsvBuilderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/CSVParserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/CSVParserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/ConvertXLSXToCSVServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/ConvertXLSXToCSVServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/FileSearcherImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/FileSearcherImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/FirstStageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/FirstStageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/MailSenderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/MailSenderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/PaymentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/PrepareReconciliationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/PrepareReconciliationImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/RegistryFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/RegistryFileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/RegistryPaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/RegistryPaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/StartReconciliationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/StartReconciliationImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/XmlUnmarshallerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/XmlUnmarshallerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/uploads/77XXXXXXXX_XXXXXX_XXXXXXXXXXXXX_171209_755928.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/uploads/77XXXXXXXX_XXXXXX_XXXXXXXXXXXXX_171209_755928.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sber/device/service/impl/FileSearcherImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sber/device/service/impl/FileSearcherImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/postgres/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/uploads/77XXXXXXXX_XXXXXX_XXXXXXXXXXXXX_171209_755928.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/77XXXXXXXX_XXXXXX_XXXXXXXXXXXXX_171209_755928.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sber/device/SpringBootApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sber/device/dao/abstraction/RegistryFileRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sber/device/service/impl/CSVParserServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sber/device/service/impl/ConvertXLSXToCSVServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sber/device/service/impl/FileSearcherImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sber/device/service/impl/MailSenderServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sber/device/service/impl/PrepareReconciliationImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sber/device/service/impl/XmlUnmarshallerImplTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/dao/abstraction/PaymentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/dao/abstraction/PaymentDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/model/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/model/Payment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/model/RegistryFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/model/RegistryFile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/model/RegistryPayment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/model/RegistryPayment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/service/abstraction/FileSearcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/service/abstraction/FileSearcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/FileSearcherImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/FileSearcherImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/RegistryFileServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/RegistryFileServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/RegistryPaymentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/RegistryPaymentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/StartReconciliationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/StartReconciliationImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/XmlUnmarshallerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sber/device/service/impl/XmlUnmarshallerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sber/device/service/impl/FileSearcherImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sber/device/service/impl/FileSearcherImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/initDB.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sber/device/service/impl/FileSearcherImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sber/device/service/impl/XmlUnmarshallerImplTest.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,52 +105,22 @@
         <item name="payment: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="SberDevice@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="SberDevice: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="payment: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="bundle: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="SberDevice@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="SberDevice: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="payment: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="payments: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="SberDevice@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="SberDevice: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="payment: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="registry_payments: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="First_stage_Reconcillation" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -181,19 +151,15 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.30989584" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.sber.device.service.impl" />
       <recent name="com.sber.device.dao.abstraction" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\imam5\IdeaProjects\Device-dev\Reconcillation\src" />
-      <recent name="C:\Users\imam5\IdeaProjects\Device-dev\Reconcillation\src\main" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -209,6 +175,16 @@
       <recent name="C:\Users\imam5\IdeaProjects\Device-dev\Reconcillation\src\main\java\com\sber\device\service\impl" />
       <recent name="C:\Users\imam5\IdeaProjects\Device-dev\Reconcillation\src\main\java\com\sber\device\service\abstraction" />
       <recent name="C:\Users\imam5\IdeaProjects\Device-dev\Reconcillation\src\main\java\com\sber\device\model" />
+    </key>
+    <key name="OPEN_URL_DIALOG">
+      <recent name="https://github.com/LiLRome088/Device.git" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\imam5\IdeaProjects\Device-dev\Reconcillation\src\main\resources" />
+      <recent name="C:\Users\imam5\IdeaProjects\Device-dev\Reconcillation\postgres" />
+      <recent name="C:\Users\imam5\IdeaProjects\Device-dev\Reconcillation" />
+      <recent name="C:\Users\imam5\IdeaProjects\Device-dev\Reconcillation\.idea" />
+      <recent name="C:\Users\imam5\IdeaProjects\Device-dev\Reconcillation\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -228,70 +204,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application ">
-    <configuration name="CSVParserServiceImplTest.parseFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Reconcillation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sber.device.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sber.device.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.sber.device.service.impl.CSVParserServiceImplTest" />
-      <option name="METHOD_NAME" value="parseFile" />
-      <option name="TEST_OBJECT" value="method" />
+  <component name="RunManager" selected="JAR Application.Reconcillation-1.0-SNAPSHOT.jar">
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <shortenClasspath name="CLASSPATH_FILE" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConvertXLSXToCSVServiceImplTest.convertXLXSFileToCSV" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Reconcillation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sber.device.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sber.device.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.sber.device.service.impl.ConvertXLSXToCSVServiceImplTest" />
-      <option name="METHOD_NAME" value="convertXLXSFileToCSV" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Reconcillation-1.0-SNAPSHOT-jar-with-dependencies.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/Reconcillation-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <method v="2" />
     </configuration>
-    <configuration name="FileSearcherImplTest.testing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Reconcillation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sber.device.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sber.device.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.sber.device.service.impl.FileSearcherImplTest" />
-      <option name="METHOD_NAME" value="testing" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Reconcillation-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/Reconcillation-1.0-SNAPSHOT.jar" />
+      <method v="2" />
     </configuration>
-    <configuration name="PrepareReconciliationImplTest.isReconciliationReady" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Reconcillation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sber.device.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sber.device.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.sber.device.service.impl.PrepareReconciliationImplTest" />
-      <option name="METHOD_NAME" value="isReconciliationReady" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="app.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/app.jar" />
+      <method v="2" />
     </configuration>
     <configuration name="Application " type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="Reconcillation" />
@@ -303,24 +237,40 @@
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sber.device.Application" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="CLASSPATH_FILE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="CLASSPATH_FILE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="JUnit.FileSearcherImplTest.testing" />
-      <item itemvalue="JUnit.ConvertXLSXToCSVServiceImplTest.convertXLXSFileToCSV" />
-      <item itemvalue="JUnit.CSVParserServiceImplTest.parseFile" />
-      <item itemvalue="JUnit.PrepareReconciliationImplTest.isReconciliationReady" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="JAR Application.app.jar" />
+      <item itemvalue="JAR Application.Reconcillation-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <item itemvalue="JAR Application.Reconcillation-1.0-SNAPSHOT.jar" />
       <item itemvalue="Spring Boot.Application " />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.Reconcillation-1.0-SNAPSHOT.jar" />
         <item itemvalue="Spring Boot.Application " />
-        <item itemvalue="JUnit.FileSearcherImplTest.testing" />
-        <item itemvalue="JUnit.CSVParserServiceImplTest.parseFile" />
-        <item itemvalue="JUnit.PrepareReconciliationImplTest.isReconciliationReady" />
-        <item itemvalue="JUnit.ConvertXLSXToCSVServiceImplTest.convertXLXSFileToCSV" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="JAR Application.app.jar" />
+        <item itemvalue="JAR Application.Reconcillation-1.0-SNAPSHOT-jar-with-dependencies.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -332,21 +282,31 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@35af62ad" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@df166f07" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@35af62ad" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1cc374b3" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@df166f07" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@dc670a35" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fdd7d22" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7646a19d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fdd7d22" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@210c7a14" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7646a19d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@400d9249" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7646a19d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@5b9ecc38" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7646a19d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@79482a2" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -381,6 +341,18 @@
       <workItem from="1593964422711" duration="2650000" />
       <workItem from="1594018674871" duration="24696000" />
       <workItem from="1594194568797" duration="6000" />
+      <workItem from="1594214857349" duration="2667000" />
+      <workItem from="1594244553893" duration="189000" />
+      <workItem from="1594285192536" duration="470000" />
+      <workItem from="1594369049184" duration="35411000" />
+      <workItem from="1594579733999" duration="830000" />
+      <workItem from="1594580849455" duration="6791000" />
+      <workItem from="1594623770408" duration="12058000" />
+      <workItem from="1594710690346" duration="2647000" />
+      <workItem from="1594826463028" duration="1258000" />
+      <workItem from="1594909965489" duration="1849000" />
+      <workItem from="1594968601198" duration="1215000" />
+      <workItem from="1595237806200" duration="67000" />
     </task>
     <task id="LOCAL-00001" summary="working app 0.1">
       <created>1593369670425</created>
@@ -410,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593721937123</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finished first stage">
+      <created>1594201216659</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1594201216659</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,7 +413,8 @@
     <MESSAGE value="BeforeTesting" />
     <MESSAGE value="New version" />
     <MESSAGE value="Merged into dev worked prepare" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged into dev worked prepare" />
+    <MESSAGE value="Finished first stage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished first stage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -475,16 +455,6 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/sber/device/service/impl/MailSenderServiceImplTest.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/sber/device/service/impl/MailSenderServiceImplTest.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/MailSenderServiceImpl.java</url>
           <line>45</line>
           <option name="timeStamp" value="22" />
@@ -501,13 +471,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/PaymentServiceImpl.java</url>
-          <line>27</line>
+          <line>29</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/PaymentServiceImpl.java</url>
-          <line>29</line>
+          <line>31</line>
           <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sber/device/controller/PrepareController.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/RemoteFileSystemManagerImpl.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/RemoteFileSystemManagerImpl.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sber/device/service/impl/RemoteFileSystemManagerImpl.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="71" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

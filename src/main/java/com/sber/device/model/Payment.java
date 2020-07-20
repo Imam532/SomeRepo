@@ -19,7 +19,7 @@ public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer merchant_id;        //compose key(ck)
+    private Long merchant_id;        //compose key(ck)
     private Integer invoice_id;
     private Integer card_id;            //ck
 

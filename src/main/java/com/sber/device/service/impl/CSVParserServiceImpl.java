@@ -70,7 +70,7 @@ public class CSVParserServiceImpl implements CSVParserService {
             String[] row = allRows.get(i);
 
             if (row != null) {
-                bean.setMerchant_code(Integer.parseInt(row[0]));
+                bean.setMerchant_code(Long.parseLong(row[0]));
                 bean.setTerminal(row[1]);
                 try {
                     bean.setOper_date(

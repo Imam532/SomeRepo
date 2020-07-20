@@ -2,6 +2,7 @@ package com.sber.device.dao.abstraction;
 
 
 import com.sber.device.model.Payment;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -17,5 +18,14 @@ public interface PaymentDao extends CrudRepository<Payment, Integer> {
             "where p.merchant_id = ?1 and " +
             "p.paysys_order_date = ?2 and " +
             "b.amount = ?3")
-    Payment getPayment(Integer merchant_id, Date oper_date, Long amount);
+    Payment getPayment(Long merchant_id, Date oper_date, Long amount);
+
+    @Modifying
+    @Query("update Payment p set p.status= ?1")
+    void updateStatus(Integer status);
+
+    @Query(value = "select p from Payment p " +
+            "where p.paysys_order_date < current_date  and " +
+            "p.status = 0")
+    List<Payment> getNotProcessedPayments();
 }

@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @Transactional
 public class PaymentServiceImpl implements PaymentService {
@@ -28,5 +30,17 @@ public class PaymentServiceImpl implements PaymentService {
                 registryPayment.getMerchant_code(),
                 registryPayment.getOper_date(),
                 registryPayment.getPayment_order_sum());
+    }
+
+    @Override
+    public void update(Integer status) {
+        logger.trace("Updating status of Payment");
+        paymentDao.updateStatus(status);
+    }
+
+    @Override
+    public List<Payment> getNotProcessedPayments() {
+        logger.trace("Get list of Payment where not process before");
+        return paymentDao.getNotProcessedPayments();
     }
 }

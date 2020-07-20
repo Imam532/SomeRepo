@@ -69,6 +69,7 @@ public class FirstStageServiceImpl implements FirstStageService {
                     forACfile.add(registryPayment);                       //AC file include all RegistryPayment
                 } else {
                     registryPaymentService.updatePaymentId(payment);       //RegistryPayment.payment_id = Payment
+                    paymentService.update(1);                     //Payment found and proceed
                     forACfile.add(registryPayment); //RegistryPayment has Payment -> write success list
                 }
             }

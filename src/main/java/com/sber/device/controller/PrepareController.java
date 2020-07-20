@@ -54,4 +54,9 @@ public class PrepareController {
     public void save() {
         RegistryFile registryFile = new RegistryFile("file", new Date(), 1);
     }
+
+    @GetMapping("/get")
+    public List<Payment> getList() {
+       return dao.getNotProcessedPayments();
+    }
 }

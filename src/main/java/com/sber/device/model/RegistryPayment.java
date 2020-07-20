@@ -33,7 +33,7 @@ public class RegistryPayment {
     private Payment payment_id;
 
     //    @Column(length = 14)
-    private Integer merchant_code;
+    private Long merchant_code;
 
     //    @Column(length = 8)
     private String terminal;
